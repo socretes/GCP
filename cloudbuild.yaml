@@ -2,7 +2,7 @@
 steps:
   - name: gcr.io/cloud-builders/docker
     args:
-      ["build", "-t", "gcr.io/$PROJECT_ID/react-nodejs:${SHORT_SHA} gcr.io/$PROJECT_ID/react-nodejs:latest", "."]
+      ["build", "-t", "gcr.io/$PROJECT_ID/react-nodejs:${SHORT_SHA}", "."]
 
   - name: "gcr.io/cloud-builders/docker"
     args: ["push", "gcr.io/$PROJECT_ID/react-nodejs:${SHORT_SHA}"]
